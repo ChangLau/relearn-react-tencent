@@ -5,6 +5,7 @@ import Comment from "../component/Comment";
 import Clock from "../component/Clock";
 import Event from "../component/Event";
 import Condition from "../component/Condition";
+import NumberList from "../component/List";
 
 const Main = () => {
   const comment = {
@@ -15,8 +16,10 @@ const Main = () => {
     text: "NWSUAF",
     date: new Date()
   };
+  const numbers = [1, 2, 3, 4, 5];
   return (
     <div>
+      <NumberList numbers={numbers}></NumberList>
       <Condition></Condition>
       <Event></Event>
       <Clock></Clock>

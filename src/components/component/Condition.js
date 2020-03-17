@@ -38,6 +38,11 @@ class Condition extends React.Component {
           {this.state.showWarning ? "Hide" : "Show"}
         </button>
         <Mailbox unreadMessages={this.state.messages}></Mailbox>
+        <ul>
+          {this.state.messages.map(message => (
+            <li key={message}>{message}</li>
+          ))}
+        </ul>
         <Greeting isLoggedIn={isLoggedIn} />
         {isLoggedIn ? (
           <LogoutButton onClick={this.handleLogoutClick} />
