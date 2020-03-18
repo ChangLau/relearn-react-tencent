@@ -7,6 +7,7 @@ import Event from "../component/Event";
 import Condition from "../component/Condition";
 import NumberList from "../component/List";
 import Form from "../component/Form";
+import ImproveStatus from "../component/ImproveStatus";
 
 const Main = () => {
   const comment = {
@@ -20,6 +21,7 @@ const Main = () => {
   const numbers = [1, 2, 3, 4, 5];
   return (
     <div>
+      <ImproveStatus></ImproveStatus>
       <Form></Form>
       <NumberList numbers={numbers}></NumberList>
       <Condition></Condition>
