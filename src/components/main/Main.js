@@ -8,6 +8,7 @@ import Condition from "../component/Condition";
 import NumberList from "../component/List";
 import Form from "../component/Form";
 import ImproveStatus from "../component/ImproveStatus";
+import Combination from "../component/Combination";
 
 const Main = () => {
   const comment = {
@@ -21,6 +22,7 @@ const Main = () => {
   const numbers = [1, 2, 3, 4, 5];
   return (
     <div>
+      <Combination></Combination>
       <ImproveStatus></ImproveStatus>
       <Form></Form>
       <NumberList numbers={numbers}></NumberList>
