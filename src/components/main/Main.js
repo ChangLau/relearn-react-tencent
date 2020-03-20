@@ -10,6 +10,8 @@ import Form from "../component/Form";
 import ImproveStatus from "../component/ImproveStatus";
 import Combination from "../component/Combination";
 import LittleProject from "../component/LittleProject";
+import Fragment from "../component/Fragment";
+import MyComponent from "../component/lazy/MyComponent";
 
 const Main = () => {
   const comment = {
@@ -62,6 +64,8 @@ const Main = () => {
   ];
   return (
     <div>
+      <MyComponent></MyComponent>
+      <Fragment></Fragment>
       <LittleProject products={PRODUCTS}></LittleProject>
       <Combination></Combination>
       <ImproveStatus></ImproveStatus>
