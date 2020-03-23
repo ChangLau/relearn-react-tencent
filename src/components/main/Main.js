@@ -12,6 +12,8 @@ import Combination from "../component/Combination";
 import LittleProject from "../component/LittleProject";
 import Fragment from "../component/Fragment";
 import MyComponent from "../component/lazy/MyComponent";
+import Context from "../component/context/Context";
+import App from "../component/dynamic-theme/app";
 
 const Main = () => {
   const comment = {
@@ -62,8 +64,11 @@ const Main = () => {
       name: "Nexus 7"
     }
   ];
+
   return (
     <div>
+      <App></App>
+      <Context></Context>
       <MyComponent></MyComponent>
       <Fragment></Fragment>
       <LittleProject products={PRODUCTS}></LittleProject>
