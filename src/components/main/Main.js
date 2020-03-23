@@ -14,6 +14,8 @@ import Fragment from "../component/Fragment";
 import MyComponent from "../component/lazy/MyComponent";
 import Context from "../component/context/Context";
 import App from "../component/dynamic-theme/app";
+import MyErrorBoundary from "../component/lazy/MyErrorBoundary";
+import Refs from "../component/refs/refs";
 
 const Main = () => {
   const comment = {
@@ -66,27 +68,30 @@ const Main = () => {
   ];
 
   return (
-    <div>
-      <App></App>
-      <Context></Context>
-      <MyComponent></MyComponent>
-      <Fragment></Fragment>
-      <LittleProject products={PRODUCTS}></LittleProject>
-      <Combination></Combination>
-      <ImproveStatus></ImproveStatus>
-      <Form></Form>
-      <NumberList numbers={numbers}></NumberList>
-      <Condition></Condition>
-      <Event></Event>
-      <Clock></Clock>
-      <Comment
-        author={comment.author}
-        text={comment.text}
-        date={comment.date}
-      ></Comment>
-      <Component name="liuchang" />
-      <Jsx />
-    </div>
+    <MyErrorBoundary>
+      <div>
+        <Refs></Refs>
+        <App></App>
+        <Context></Context>
+        <MyComponent></MyComponent>
+        <Fragment></Fragment>
+        <LittleProject products={PRODUCTS}></LittleProject>
+        <Combination></Combination>
+        <ImproveStatus></ImproveStatus>
+        <Form></Form>
+        <NumberList numbers={numbers}></NumberList>
+        <Condition></Condition>
+        <Event></Event>
+        <Clock></Clock>
+        <Comment
+          author={comment.author}
+          text={comment.text}
+          date={comment.date}
+        ></Comment>
+        <Component name="liuchang" />
+        <Jsx />
+      </div>
+    </MyErrorBoundary>
   );
 };
 
