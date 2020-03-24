@@ -16,6 +16,7 @@ import Context from "../component/context/Context";
 import App from "../component/dynamic-theme/app";
 import MyErrorBoundary from "../component/lazy/MyErrorBoundary";
 import Refs from "../component/refs/refs";
+import Table from "../component/fragments/Table";
 
 const Main = () => {
   const comment = {
@@ -70,6 +71,7 @@ const Main = () => {
   return (
     <MyErrorBoundary>
       <div>
+        <Table></Table>
         <Refs></Refs>
         <App></App>
         <Context></Context>
