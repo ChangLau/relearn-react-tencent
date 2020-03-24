@@ -17,6 +17,7 @@ import App from "../component/dynamic-theme/app";
 import MyErrorBoundary from "../component/lazy/MyErrorBoundary";
 import Refs from "../component/refs/refs";
 import Table from "../component/fragments/Table";
+import MainInput from "../component/hoc/main-input";
 
 const Main = () => {
   const comment = {
@@ -71,6 +72,7 @@ const Main = () => {
   return (
     <MyErrorBoundary>
       <div>
+        <MainInput></MainInput>
         <Table></Table>
         <Refs></Refs>
         <App></App>

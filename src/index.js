@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
-import Jsx from "./components/learn_jsx/Jsx";
+// import App from "./App";
+// import Jsx from "./components/learn_jsx/Jsx";
 import Main from "./components/main/Main";
 import * as serviceWorker from "./serviceWorker";
 

@@ -21,7 +21,7 @@ function Jsx() {
       <h1>Hello, {name}</h1>
       <h1>Hello, {formatName(user)}</h1>
       <div tabIndex="0"></div>
-      <img src={user.avatarUrl}></img>
+      <img src={user.avatarUrl} alt="头像"></img>
       <h2>It is {time}.</h2>
     </div>
   );
