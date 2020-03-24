@@ -7,13 +7,13 @@ const HOCInput = WrappedComponent => {
       this.state = {
         inputValue: "CHANGLAU"
       };
-
-      this.inputchange = param => {
-        this.setState({
-          inputValue: String(param.target.value).toUpperCase()
-        });
-      };
     }
+
+    inputchange = param => {
+      this.setState({
+        inputValue: String(param.target.value).toUpperCase()
+      });
+    };
 
     componentDidMount() {
       console.log(this.props);
