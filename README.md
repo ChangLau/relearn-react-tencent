@@ -66,3 +66,11 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+### 为什么React中事件处理this需要重新bind或者使用class field语法
+
+```
+1. class定义的组件内部方法为严格模式，调用方法没有明确指定调用者，this指向为undefined
+2. 当你使用 onClick={this.handleClick}来绑定事件监听函数的时候，handleClick 函数实际上会作为回调函数，传入 addEventListener()然后没有指定调用者执行 。
+3. 所以在 React 的组件中添加事件处理函数为什么会得到 undefnied 而不是全局对象或者别的什么东西。
+```
