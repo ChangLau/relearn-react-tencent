@@ -75,6 +75,7 @@ const Main = () => {
   return (
     <MyErrorBoundary>
       <div>
+        {/* 渲染在指定DOM节点 */}
         <Portals>
           <div>shadow</div>
         </Portals>
