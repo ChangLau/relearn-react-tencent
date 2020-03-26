@@ -18,6 +18,9 @@ import MyErrorBoundary from "../component/lazy/MyErrorBoundary";
 import Refs from "../component/refs/refs";
 import Table from "../component/fragments/Table";
 import MainInput from "../component/hoc/main-input";
+import WordAdder from "../component/word/WordAdder";
+import Portals from "../component/portals/portals";
+import "../component/portals/Parent.js";
 
 const Main = () => {
   const comment = {
@@ -72,6 +75,10 @@ const Main = () => {
   return (
     <MyErrorBoundary>
       <div>
+        <Portals>
+          <div>shadow</div>
+        </Portals>
+        <WordAdder></WordAdder>
         <MainInput></MainInput>
         <Table></Table>
         <Refs></Refs>
