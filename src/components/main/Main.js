@@ -21,6 +21,7 @@ import MainInput from "../component/hoc/main-input";
 import WordAdder from "../component/word/WordAdder";
 import Portals from "../component/portals/portals";
 import "../component/portals/Parent.js";
+import TodoApp from "../todo-list/TodoApp";
 
 const Main = () => {
   const comment = {
@@ -75,6 +76,7 @@ const Main = () => {
   return (
     <MyErrorBoundary>
       <div>
+        <TodoApp></TodoApp>
         {/* 渲染在指定DOM节点 */}
         <Portals>
           <div>shadow</div>
