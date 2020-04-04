@@ -1,4 +1,10 @@
-import { ADD_TODO, TOGGLE_TODO, SET_FILTER, DELETE_TODO } from "./actionTypes";
+import {
+  ADD_TODO,
+  TOGGLE_TODO,
+  SET_FILTER,
+  DELETE_TODO,
+  ASYNC_ADD
+} from "./actionTypes";
 
 let nextTodoId = 0;
 
@@ -21,3 +27,19 @@ export const deleteTodo = id => ({
   type: DELETE_TODO,
   payload: { id }
 });
+
+function addNum() {
+  return {
+    type: ASYNC_ADD
+  };
+}
+
+export const addAsync = () => {
+  return (dispatch, getState) => {
+    console.log(getState());
+    setTimeout(() => {
+      // Yay! Can invoke sync or async actions with `dispatch`
+      dispatch(addNum());
+    }, 1000);
+  };
+};
