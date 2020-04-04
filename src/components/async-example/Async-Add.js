@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { addAsync } from "../../redux/actions";
 
 const AsyncAdd = ({ nums, addAsync }) => {
+  useEffect(() => {
+    // Update the document title using the browser API
+    console.log("AsyncAdd Done!");
+  });
+
   return (
     <h1
       onClick={() => {
@@ -14,7 +19,7 @@ const AsyncAdd = ({ nums, addAsync }) => {
   );
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   const { nums } = state;
   return { nums };
 };
